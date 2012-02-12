@@ -1,9 +1,21 @@
 Hospitality::Application.routes.draw do
-  resources :favorites
+  resources :favorites do
+    collection do
+      get 'thanks'
+    end
+  end
 
-  resources :guests
+  resources :guests do
+    collection do
+      get 'thanks'
+    end
+  end
 
-  resources :hosts
+  resources :hosts do
+    collection do
+      get 'thanks'
+    end
+  end
 
   root :to => "home#index"
 

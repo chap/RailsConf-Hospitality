@@ -45,7 +45,8 @@ class GuestsController < ApplicationController
 
     respond_to do |format|
       if @guest.save
-        format.html { redirect_to @guest, notice: 'Guest was successfully created.' }
+        AdminMailer.submission(@guest).deliver
+        format.html { redirect_to thanks_guests_url }
         format.json { render json: @guest, status: :created, location: @guest }
       else
         format.html { render action: "new" }

@@ -45,7 +45,8 @@ class FavoritesController < ApplicationController
 
     respond_to do |format|
       if @favorite.save
-        format.html { redirect_to @favorite, notice: 'Favorite was successfully created.' }
+        AdminMailer.submission(@favorite).deliver
+        format.html { redirect_to thanks_favorites_url }
         format.json { render json: @favorite, status: :created, location: @favorite }
       else
         format.html { render action: "new" }

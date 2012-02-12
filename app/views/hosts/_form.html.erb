@@ -43,9 +43,7 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="span6">
       <div class="control-group">
         <%= f.label :address1, 'Address' %>
         <div class="controls">
@@ -75,10 +73,17 @@
           <p class="help-block">Tell us a little bit about your place.</p>
         </div>
       </div>
+
+      <div class="form-actions">
+        <%= f.submit 'Submit', :class => 'btn btn-primary' %>
+      </div>
+    </div>
+
+    <div class="span6">
+      <p>Think of it has AirB&B except you'll actually have something in common.</p>
+      <p>When we find guests that might be a good match, we'll contact you with their details and give you a chance to vet before confirming anything.</p>
     </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.submit 'Submit', :class => 'btn btn-primary' %>
-  </div>
+  
 <% end %>

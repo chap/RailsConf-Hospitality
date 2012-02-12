@@ -22,7 +22,15 @@ body#home_index {
     line-height: 36px;
     &.normal {
       font-size: 16px;
+      line-height: 20px;
+      font-weight: normal;
     }
+  }
+
+  ul#favorites {
+    width: 400px;
+    margin: 0 auto;
+    list-style: none;
   }
 
   .btn-large {

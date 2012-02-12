@@ -45,7 +45,8 @@ class HostsController < ApplicationController
 
     respond_to do |format|
       if @host.save
-        format.html { redirect_to @host, notice: 'Host was successfully created.' }
+        AdminMailer.submission(@host).deliver
+        format.html { redirect_to thanks_hosts_url }
         format.json { render json: @host, status: :created, location: @host }
       else
         format.html { render action: "new" }
