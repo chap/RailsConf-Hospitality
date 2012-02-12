@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211223925) do
+ActiveRecord::Schema.define(:version => 20120212124456) do
 
   create_table "favorites", :force => true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "website"
     t.text     "description"
-    t.boolean  "approved",    :default => true, :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "approved",    :default => false, :null => false
   end
 
   create_table "guests", :force => true do |t|
